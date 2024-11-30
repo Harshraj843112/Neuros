@@ -3,7 +3,7 @@ import ArrowRightRoundedIcon from "@mui/icons-material/ArrowRightRounded";
 
 const NavbarDropdown = ({ dropdown }) => {
   return (
-    <div className="absolute top-full left-0 mt-2 bg-black text-white rounded-lg shadow-lg p-6 w-max z-50">
+    <div className="absolute top-full left-0 mt-4 bg-[#2E4168] text-white rounded-lg shadow-lg p-4 px-8 w-max z-50 ">
       <div className="flex gap-6">
         {dropdown.map((section, index) => (
           <div key={index} className="flex flex-col flex-shrink-0">
@@ -21,10 +21,10 @@ const NavbarDropdown = ({ dropdown }) => {
                 {section.items.map((item, subIndex) => (
                   <li
                     key={subIndex}
-                    className="hover:text-red-500 px-4 py-2 cursor-pointer hover:translate-x-7 duration-300"
+                    className="  cursor-pointer  duration-300 rounded-lg "
                   >
                     <ArrowRightRoundedIcon
-                      size={12}
+                      size={1}
                       className="hover:text-red-400 font-extrabold transition-transform duration-300"
                     />
                     {item}
@@ -37,7 +37,7 @@ const NavbarDropdown = ({ dropdown }) => {
                 <img
                   src={section.image}
                   alt="Dropdown Preview"
-                  className="rounded-lg shadow-lg w-[290px] h-[200px] object-cover"
+                  className="rounded-lg shadow-lg w-[290px] h-[300px] object-cover"
                 />
               </div>
             )}

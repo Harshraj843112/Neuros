@@ -1,28 +1,39 @@
-import { UsersIcon, PuzzlePieceIcon, CubeTransparentIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import Medicine from "../../img/Medicine.png";
+import Medical from "../../img/Medical Vault.jpg";
+import Digital from "../../img/Genreatic Medicine.png";
+import ClinicalMedicine from "../../img/Medical Vault.jpg";
+
 const features = [
-    {
-      icon: <UsersIcon className="w-10 h-10 text-blue-500" />,
-      title: 'Experienced team',
-      description:
-        'Emphasize the expertise and knowledge of your team in developing and implementing neural networks.',
-    },
-    {
-      icon: <PuzzlePieceIcon className="w-10 h-10 text-blue-500" />,
-      title: 'Tailored solutions',
-      description:
-        'Mention your ability to customize solutions based on specific business requirements.',
-    },
-    {
-      icon: <CubeTransparentIcon className="w-10 h-10 text-blue-500" />,
-      title: 'Cutting-edge technology',
-      description:
-        'Highlight your use of the latest tools and techniques in neural network development.',
-    },
-    {
-      icon: <CheckCircleIcon className="w-10 h-10 text-blue-500" />,
-      title: 'Proven track record',
-      description:
-        'Showcase successful case studies or client testimonials that demonstrate the effectiveness of your services.',
-    },
-  ];
-  export default features;
+  {
+    icon: <img src={Medicine} alt="Medicine Reminder" className="w-16 h-16" />,
+    title: "Medicine Reminder",
+    description:
+      "Now you can get Medicine reminders on your phone by using Medicine Reminder Service from GudMed",
+  },
+  {
+    icon: <img src={Medical} alt="Medical Vault" className="w-16 h-16" />,
+    title: "Medical VAULT",
+    description:
+      "Now you can store all your medical Documents, Reports, Prescriptions, Images in a secured VAULT",
+  },
+  {
+    icon: <img src={Digital} alt="Digital Prescription" className="w-16 h-16" />,
+    title: "DIGITAL Prescription in your Language",
+    description:
+      "Now you can get your Doctor’s handwritten prescription in Digital format in your own Hindi Language",
+  },
+  {
+    icon: (
+      <img
+        src={ClinicalMedicine}
+        alt="Generic Medicine Service"
+        className="w-16 h-16"
+      />
+    ),
+    title: "Generic Medicine Service",
+    description:
+      "Now you can SAVE UP TO 70% on your medical bills by using GudMed Generic Service",
+  },
+];
+
+export default features;
