@@ -24,7 +24,7 @@ const Home = () => {
       <AnimatedText></AnimatedText>
       <About></About>
       <FeaturesSection></FeaturesSection>
-      <PricingSection></PricingSection>
+      {/* <PricingSection></PricingSection> */}
 
       <TestimonialSection></TestimonialSection>
       <Faq></Faq>

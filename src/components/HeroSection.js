@@ -7,56 +7,58 @@ import LeftLogo from "../img/Logo (1).png";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gray-50 py-16 px-8">
+    <section className="bg-gray-50 py-12 px-4 sm:py-16 sm:px-8">
       {/* Container */}
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:justify-between">
         {/* Left Half */}
-        <div className="w-full md:w-1/2 flex items-start justify-start">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-6 md:mb-0">
           <img
             src={LeftLogo}
             alt="Left Decorative Logo"
-            className="h-96 w-96 opacity-80 -ml-52"
+            className="h-56 w-56 sm:h-72 sm:w-72 md:h-96 md:w-96 opacity-80 -ml-4"
           />
         </div>
 
         {/* Right Half */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 text-center md:text-left">
           {/* Heading */}
-          <div className="text-7xl font-bold text-gray-800 md:text-6xl leading-loose space-y-4">
-  <div className="whitespace-nowrap">Unleashing the Potential of</div>
-  <div className="whitespace-nowrap">
-    <span className="text-red-500">Artificial Intelligence</span> for
-  </div>
-  <div>
-    <span className="text-blue-500">Intelligent Solutions</span>
-  </div>
-</div>
+          <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-800 leading-snug sm:leading-normal space-y-3 sm:space-y-4 whitespace-nowrap">
+            <div>Unleashing the Potential of</div>
+            <div>
+              <span className="text-red-500 whitespace-nowrap">
+                Artificial Intelligence for
+              </span>
+            </div>
+            <div>
+              <span className="text-blue-500">Intelligent Solutions</span>
+            </div>
+          </div>
 
           {/* Logos Section */}
-          <div className="flex items-start justify-start md:justify-start mt-10 space-x-24">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4 mt-8 sm:mt-10">
             {/* Logo 1 */}
             <img
               src={logo1}
               alt="Metriks Data Center"
-              className="h-10 opacity-70 hover:opacity-100 transition-opacity duration-300 items-start"
+              className="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
             />
             {/* Logo 2 */}
             <img
               src={logo2}
               alt="QUO Legal Firm"
-              className="h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
+              className="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
             />
             {/* Logo 3 */}
             <img
               src={logo3}
               alt="Agrimax"
-              className="h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
+              className="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
             />
             {/* Logo 4 */}
             <img
               src={logo4}
               alt="VS Studio"
-              className="h-16 opacity-70 hover:opacity-100 transition-opacity duration-300"
+              className="h-8 sm:h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
         </div>
