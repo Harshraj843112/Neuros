@@ -5,7 +5,7 @@ import "swiper/css";
 
 // Import your images
 import FramerMotion1 from "../img/FramerMotion1.pnj.jpg";
-import FramerMotion2 from "../img/FramerMotion2.pnj.jpg";
+import FramerMotion2 from "../img/Presentation1_page-0001.jpg";
 
 // Define the slides with titles and gradient words
 const slides = [
@@ -93,7 +93,7 @@ const Slider = () => {
 
             {/* Image */}
             <div
-              className="relative w-full h-[500px] bg-cover bg-center"
+              className="relative w-full h-[800px] bg-cover bg-center object-cover ml-8 bg-gray-100"
               style={{ backgroundImage: `url(${slide.image})` }}
             ></div>
           </SwiperSlide>

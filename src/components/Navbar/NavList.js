@@ -49,7 +49,7 @@ const NavList = [
     link: "/doctors", // Assuming this links to the doctors' page
     dropdown: [
       {
-        items: [
+        title: [
           "OPD",
         ],
       },

@@ -18,7 +18,7 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div className="flex flex-col space-y-0 overflow-hidden"> {/* This removes any vertical gap between the components */}
-      <Navbar></Navbar>
+     
       <Slider />
       <HeroSection></HeroSection>
       <AnimatedText></AnimatedText>
@@ -32,8 +32,7 @@ const Home = () => {
       <Blog></Blog>
 
 
-      <Footer></Footer>
-
+     
     </div>
   );
 };

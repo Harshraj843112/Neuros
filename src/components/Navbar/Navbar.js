@@ -1,67 +1,105 @@
-import React, { useState, useRef } from "react";  // Added 'useRef' here
-import { AiOutlineAppstore, AiOutlineShareAlt } from "react-icons/ai";
-import { FaSearch } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import NavList from "./NavList";
 import NavbarItem from "./NavbarItem";
 import NavbarDropdown from "./NavbarDropdown";
-import Logo from "../../img/Gudmed1.png"
+import Logo from "../../img/Gudmed1.png";
 
 const Navbar = () => {
-  const [activeDropdown, setActiveDropdown] = useState(false);
-  const hoverRef = useRef(false); // useRef keeps the state unchanged across renders
-  
+  const [activeDropdown, setActiveDropdown] = useState(null); // Track active dropdown
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Check if the screen size is mobile
+
+  // Handle window resize for mobile detection
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Update the isMobile state on window resize
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Handle mouse enter for desktop dropdown
   const handleMouseEnter = (list) => {
-    setActiveDropdown(list); // Show dropdown instantly
-    hoverRef.current = true;  // Set hover state to true using the ref
+    setActiveDropdown(list);
   };
-  
+
+  // Handle mouse leave for desktop dropdown
   const handleMouseLeave = () => {
-    hoverRef.current = false;  // Set hover state to false when mouse leaves
-    
-    setTimeout(() => {
-      if (!hoverRef.current) {  // Check if it's no longer hovering using the ref
-        setActiveDropdown(false); // Close dropdown after delay
-      }
-    }, 300); // 300ms delay
+    setActiveDropdown(null);
   };
+
+  // Toggle mobile menu visibility
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
-    <div className="p-8 bg-gray-100">
-      <div className="rounded-full px-6 py-8 bg-white shadow-md flex items-center justify-between">
-        {/* Left Icons */}
-        <div className="flex items-center space-x-4 ml-20">
-                    <img src={Logo} alt="logo" className="h-16 w-auto" />
-                </div>
-
-        {/* Navigation List */}
-        <div className="flex-1 ml-48 relative">
-        <ul className="flex gap-10 items-center font-medium text-xl text-center">
-  {NavList.map((item, index) => (
-    <NavbarItem
-      key={item.id}
-      list={item.list}
-      link={item.link} // Pass 'link' here
-      onMouseEnter={() => handleMouseEnter(item.list)}
-      onMouseLeave={handleMouseLeave}
-      isActive={activeDropdown === item.list}
-      isFirstItem={index === 0} // Pass isFirstItem for the first item
-    >
-      {item.dropdown && activeDropdown === item.list && (
-        <NavbarDropdown dropdown={item.dropdown} />
-      )}
-    </NavbarItem>
-  ))}
-</ul>
-
+    <div className="p-4 sm:p-6 bg-gray-100">
+      <div className="bg-white shadow-md rounded-lg px-4 py-6 sm:px-6 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src={Logo} alt="logo" className="h-12 sm:h-16 w-auto" />
         </div>
 
-        {/* Right Section */}
-        <div className="flex items-center gap-16">
-         
-          <button className="px-12 py-6 text-2xl rounded-full border border-red-500 text-black font-semibold transition hover:bg-gradient-to-r hover:from-purple-400 hover:to-red-500 hover:text-white">
-            Get in touch
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden flex items-center">
+          <button
+            className="text-3xl"
+            onClick={toggleMobileMenu} // Toggle mobile menu on click
+          >
+            {mobileMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
           </button>
         </div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <ul className="flex gap-6 md:gap-10 items-center font-medium text-lg">
+            {NavList.map((item) => (
+              <NavbarItem
+                key={item.id}
+                list={item.list}
+                link={item.link}
+                onMouseEnter={() => handleMouseEnter(item.list)}
+                onMouseLeave={handleMouseLeave}
+                isActive={activeDropdown === item.list}
+              >
+                {item.dropdown && (
+                  <NavbarDropdown
+                    dropdown={item.dropdown}
+                    isMobile={isMobile} // Pass isMobile prop
+                  />
+                )}
+              </NavbarItem>
+            ))}
+          </ul>
+        </div>
       </div>
+
+      {/* Mobile Navigation */}
+      {mobileMenuOpen && (
+        <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-6">
+          <ul className="flex flex-col gap-4 text-lg">
+            {NavList.map((item) => (
+              <NavbarItem
+                key={item.id}
+                list={item.list}
+                link={item.link}
+              >
+                {item.dropdown && (
+                  <NavbarDropdown
+                    dropdown={item.dropdown}
+                    isMobile={isMobile} // Pass isMobile prop
+                  />
+                )}
+              </NavbarItem>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
