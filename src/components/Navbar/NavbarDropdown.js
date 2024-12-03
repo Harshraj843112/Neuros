@@ -6,7 +6,7 @@ const NavbarDropdown = ({ dropdown, isMobile }) => {
     <div
       className={`${
         isMobile ? "absolute top-0 left-0 mt-2" : "md:relative mt-4"
-      } bg-[#2E4168] text-white rounded-lg shadow-lg p-4 md:px-8 w-full md:w-max z-50`}
+      } bg-[#2E4168] text-white rounded-lg shadow-lg p-2 md:px-8 w-full md:w-max z-50`}
     >
       <div className="grid grid-cols-1 md:flex md:gap-6">
         {dropdown.map((section, index) => (

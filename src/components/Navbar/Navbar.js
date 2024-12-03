@@ -58,7 +58,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
        {/* Desktop Navigation */}
        <div className="hidden md:flex flex-1 justify-center">
-  <ul className="flex gap-6 md:gap-10 items-center font-medium text-lg">
+  <ul className="flex gap-6 md:gap-4 items-center font-medium text-lg">
     {NavList.map((item) => (
       <li
         key={item.id}
@@ -85,7 +85,7 @@ const Navbar = () => {
 </div>
 
 
-        <button className="px-12 hidden md:block py-6 text-2xl rounded-full border border-red-500 text-black font-semibold transition hover:bg-gradient-to-r hover:from-purple-400 hover:to-red-500 hover:text-white">
+        <button className="px-8 hidden md:block py-6 text-2xl rounded-full border border-red-500 text-black font-semibold transition hover:bg-gradient-to-r hover:from-purple-400 hover:to-red-500 hover:text-white">
 
 
 
