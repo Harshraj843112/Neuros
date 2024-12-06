@@ -11,6 +11,10 @@ import Faq from '../components/Faq';
 import Blog from '../components/Blog/Blog';
 
 import Footer from '../components/Footer';
+import ImageComparison from '../components/ImageCompare';
+import OurClient from '../components/OurClient';
+import KnowledgePartnerCardSection from '../components/KnowledgePartner/KnowldgePartnerCardSection';
+import DoctorsCarousel from '../components/CaroselSmall';
 
 
 
@@ -22,14 +26,19 @@ const Home = () => {
       <Slider />
       <HeroSection></HeroSection>
       <AnimatedText></AnimatedText>
+      <ImageComparison></ImageComparison>
       <About></About>
       <FeaturesSection></FeaturesSection>
       {/* <PricingSection></PricingSection> */}
+     <KnowledgePartnerCardSection></KnowledgePartnerCardSection>
+      
 
       <TestimonialSection></TestimonialSection>
+      <DoctorsCarousel></DoctorsCarousel>
       <Faq></Faq>
 
       <Blog></Blog>
+      <OurClient></OurClient>
 
 
      

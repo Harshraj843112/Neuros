@@ -17,15 +17,16 @@ const ForHospitalHome = () => {
             
             <HospitalFeatureCard
                 imageSrc={Ncamera}
-                title="GudMed for Hospitals"
-                description="Hospitals today need more than just care facilities-they need intelligent solutions that make processes efficient and patient-centric. GudMed enhances your hospital's operational efficiency by digitizing medical records, reducing discharge times, and optimizing the use of your medical resources. Our AI-integrated platform helps reduce the burden on healthcare staff, improve the patient experience, and increase overall revenue by managing prescriptions, tests, and patient engagement seamlessly."
+                title="Transform Your Hospital into a Complete Smart Hospital with GudMed"
+                description="In today's fast-evolving healthcare landscape, hospitals need to go beyond traditional systems to remain efficient, patient-centric, and operationally effective. GudMed helps your hospital transition into a smart hospital, where processes are automated, patient care is seamless, and data management is no longer dependent on outdated methods like archiving MRD files for years.
+With GudMed, you can eliminate cumbersome manual record-keeping, improve patient outcomes, and streamline hospital operations—all through advanced, real-time technology solutions."
                 features={[
-                    "Reduce discharge waiting times",
-                    "Real-time lab and pharmacy integration",
-                    "Manage post-treatment care with automated reminders",
-                    "AI-powered analytics for better decision-making",
-                    "Enhanced patient engagement and satisfaction",
-                    "Optimize medical resources and staff workload"
+                    "Real-Time Prescription and Discharge Summary Digitization",
+                    "Digital Patient Records and Document Management",
+                    "AI-Powered Analytics and Operational Efficiency",
+                    "Seamless Integration with Labs and Pharmacies",
+                    "Post-Care Engagement and Automated Follow-Ups",
+                
                 ]}
             />
 

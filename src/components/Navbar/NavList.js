@@ -1,8 +1,8 @@
 const NavList = [
   {
     id: "1",
-    list: "HOME",
-    link: "/", // Assuming "HOME" links to the homepage
+    list: "ABOUT US",
+    link: "/about", // Assuming "HOME" links to the homepage
     dropdown: [
       {
         title: "Artificial Intelligence",
@@ -47,13 +47,6 @@ const NavList = [
     id: "2",
     list: "Doctors",
     link: "/doctors", // Assuming this links to the doctors' page
-    dropdown: [
-      {
-        title: [
-          "OPD",
-        ],
-      },
-    ],
   },
   {
     id: "3",
@@ -61,7 +54,11 @@ const NavList = [
     link: "/hospital", // Linking to the hospital page
     dropdown: [
       {
-        items: ["IPD"],
+       
+        items: [
+          { name: "IPD", link: "/hospital/ipd" }, // Link for IPD
+          { name: "OPD", link: "/hospital/opd" }, // Link for OPD
+        ],
       },
     ],
   },

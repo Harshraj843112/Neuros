@@ -9,12 +9,7 @@ import FramerMotion2 from "../img/Presentation1_page-0001.jpg";
 
 // Define the slides with titles and gradient words
 const slides = [
-  {
-    image: FramerMotion1,
-    title: "Revolutionize your business <br/> with cutting-edge Neural <br/> Network solutions",
-    gradientWords: ["Neural", "Network"],
-    textOverlay: false, // Text overlays the image
-  },
+
   {
     image: FramerMotion2,
     title: "Harness the <br/> Power of Artificial <br/> Intelligence",
@@ -23,6 +18,13 @@ const slides = [
     description:
       "Highlight the potential benefits of Neural Networks,<br/> such as improved decision-making, predictive analytics,<br/> and automation.",
   },
+  {
+    image: FramerMotion1,
+    title: "Revolutionize your business <br/> with cutting-edge Neural <br/> Network solutions",
+    gradientWords: ["Neural", "Network"],
+    textOverlay: false, // Text overlays the image
+  },
+  
 ];
 
 const Slider = () => {

@@ -29,7 +29,7 @@ const BenefitsList = () => {
                         Stop Storing Data in Archived MRD Files—Go Digital with GudMed
                     </h3>
                     <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
-                        Many hospitals still rely on physical Medical Record Departments (MRDs) to store patient data, often in overcrowded, paper-based archives. This method is not only inefficient but also prone to errors and retrieval challenges. With GudMed, you can put an end to these storage issues by digitizing all patient records.
+                    Many hospitals still rely on physical Medical Record Departments (MRDs) to store patient data for years, often in overcrowded, paper-based archives. This method is not only inefficient but also prone to errors, loss, and difficulties in retrieval. With GudMed, you can put an end to these storage challenges by digitizing all patient records.
                     </p>
                     <ul className="space-y-4">
                         {benefits.map((benefit, index) => (

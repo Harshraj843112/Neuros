@@ -6,25 +6,25 @@ const benefits = [
     icon: <FaHandsHelping className="w-10 h-10 text-purple-600" />,
     title: "Operational Excellence",
     description:
-      "Streamline operations with automated workflows that free up time and reduce errors.",
+      "Automated workflows that free up time and reduce errors.",
   },
   {
     icon: <FaRegSmileBeam className="w-10 h-10 text-red-500" />,
     title: "Improved Patient Outcomes",
     description:
-      "Provide better engagement, faster access to care, and continuous follow-ups for optimal health outcomes.",
+      "Faster access to care, better engagement, and continuous follow-ups lead to better health results.",
   },
   {
     icon: <FaPiggyBank className="w-10 h-10 text-green-600" />,
     title: "Cost Efficiency",
     description:
-      "Reduce operational costs through digital records and process automation.",
+      "By digitizing records and automating processes, hospitals save on costs related to paper, storage, and staff resources.",
   },
   {
     icon: <FaBrain className="w-10 h-10 text-blue-600" />,
     title: "Data-Driven Decision Making",
     description:
-      "Utilize AI insights to predict trends, optimize resources, and personalize care.",
+      "AI-driven insights help hospitals predict trends, manage resources, and provide more personalized care.",
   },
 ];
 
@@ -59,9 +59,7 @@ const CTASection = () => {
         Join the Future of Healthcare Today
       </h4>
       <p className="text-base text-gray-800 mb-8 sm:text-lg md:text-xl">
-        Experience GudMed’s smart hospital solutions and move beyond the
-        limitations of physical records and manual processes. Together, let's
-        enhance healthcare operations for better outcomes.
+      Embrace GudMed’s smart hospital solutions and leave behind the inefficiencies of physical records and manual processes. Together, we can revolutionize how hospitals operate, ensuring better outcomes for patients and streamlined efficiency for healthcare providers.
       </p>
       <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:bg-blue-700 sm:px-8 sm:py-4">
         Get Started with GudMed

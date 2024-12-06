@@ -4,6 +4,7 @@ import NavList from "./NavList";
 import NavbarItem from "./NavbarItem";
 import NavbarDropdown from "./NavbarDropdown";
 import Logo from "../../img/Gudmed1.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null); // Track active dropdown
@@ -42,7 +43,9 @@ const Navbar = () => {
       <div className="bg-white shadow-md rounded-lg px-4 py-6 sm:px-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
+          <Link to="/">
           <img src={Logo} alt="logo" className="h-12 sm:h-16 w-auto" />
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -56,42 +59,42 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-       {/* Desktop Navigation */}
-       <div className="hidden md:flex flex-1 justify-center">
-  <ul className="flex gap-6 md:gap-4 items-center font-medium text-lg">
-    {NavList.map((item) => (
-      <li
-        key={item.id}
-        className="relative"
-        onMouseEnter={() => handleMouseEnter(item.list)}
-        onMouseLeave={handleMouseLeave}
-      >
-        {/* Navbar Item */}
-        <NavbarItem
-          list={item.list}
-          link={item.link}
-          isActive={activeDropdown === item.list}
-        />
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <ul className="flex gap-6 md:gap-4 items-center font-medium text-lg">
+            {NavList.map((item) => (
+              <li
+                key={item.id}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(item.list)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {/* Navbar Item */}
+                <NavbarItem
+                  list={item.list}
+                  link={item.link}
+                  isActive={activeDropdown === item.list}
+                />
 
-        {/* Dropdown */}
-        {item.dropdown && activeDropdown === item.list && (
-          <div className="absolute top-full left-0 z-20 bg-white  rounded-md p-2">
-            <NavbarDropdown dropdown={item.dropdown} isMobile={isMobile} />
-          </div>
-        )}
-      </li>
-    ))}
-  </ul>
-</div>
+                {/* Dropdown */}
+                {item.dropdown && activeDropdown === item.list && (
+                  <div className="absolute top-full left-0 z-20 bg-white  rounded-md p-2">
+                    <NavbarDropdown dropdown={item.dropdown} isMobile={isMobile} />
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
 
 
         <button className="px-8 hidden md:block py-6 text-2xl rounded-full border border-red-500 text-black font-semibold transition hover:bg-gradient-to-r hover:from-purple-400 hover:to-red-500 hover:text-white">
 
 
 
-            Get in touch
+          Get in touch
 
-          </button>
+        </button>
       </div>
 
       {/* Mobile Navigation */}
@@ -122,7 +125,7 @@ const Navbar = () => {
       )}
 
       {/* Get in Touch Button for Desktop */}
-      
+
     </div>
   );
 };
