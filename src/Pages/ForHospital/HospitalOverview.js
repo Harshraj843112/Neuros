@@ -2,7 +2,7 @@ import React from 'react';
 
 const HospitalOverview = () => {
     return (
-        <section className="py-10 px-4 sm:px-6 lg:px-16 bg-gradient-to-r from-blue-100 to-blue-200 rounded-lg shadow-md">
+        <section className="py-10 px-4 sm:px-6 lg:px-16 bg-white rounded-lg shadow-md">
             <div className="max-w-4xl mx-auto space-y-6 text-center">
                 {/* Title */}
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900">

@@ -15,6 +15,9 @@ import ImageComparison from '../components/ImageCompare';
 import OurClient from '../components/OurClient';
 import KnowledgePartnerCardSection from '../components/KnowledgePartner/KnowldgePartnerCardSection';
 import DoctorsCarousel from '../components/CaroselSmall';
+import ComparisonSection from '../components/ComparisonSection';
+import WhyGudmedUnique from '../components/WhyGudmedUnique';
+import TechnologyPage from '../components/TechnologyPage';
 
 
 
@@ -28,8 +31,11 @@ const Home = () => {
       <AnimatedText></AnimatedText>
       <ImageComparison></ImageComparison>
       <About></About>
+      <TechnologyPage></TechnologyPage>
       <FeaturesSection></FeaturesSection>
       {/* <PricingSection></PricingSection> */}
+      <ComparisonSection></ComparisonSection>
+      <WhyGudmedUnique></WhyGudmedUnique>
      <KnowledgePartnerCardSection></KnowledgePartnerCardSection>
       
 

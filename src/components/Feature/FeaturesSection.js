@@ -9,7 +9,7 @@ const FeaturesSection = () => {
     <section className="py-16 bg-white over">
       <div className="container mx-auto  ">
         <h2 className="text-3xl font-bold text-center mb-8">
-        How we are making Patient Smarter
+        How we are making Patient Smarter 
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 w-full max-w-none">
 

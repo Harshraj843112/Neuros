@@ -35,7 +35,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white">
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -90,7 +90,7 @@ const Slider = () => {
 
             {/* Image */}
             <div
-              className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[800px] bg-cover bg-center"
+              className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[800px] bg-cover bg-center lg:mx-2"
               style={{ backgroundImage: `url(${slide.image})` }}
             ></div>
           </SwiperSlide>
