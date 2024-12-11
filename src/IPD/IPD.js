@@ -2,6 +2,7 @@ import React from 'react';
 import IPDBenefitsSectionIPD from './IPDBenefitsSectionIPD';
 import DischargeSummaryIPD from './DischargeSummaryIPD';
 import SliderIPD from './SliderIPD'; // Import the slider component
+import MedicalRecord from './MedicalRecord';
 
 const IPDHomeIPD = () => {
   return (
@@ -25,9 +26,10 @@ Experience seamless care and efficient discharge processes with GudMed’s
 
       {/* Discharge Summary Section for IPD */}
       <DischargeSummaryIPD />
-
+      <MedicalRecord></MedicalRecord>
       {/* Benefits Section for IPD Services */}
       <IPDBenefitsSectionIPD />
+     
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { 
   DocumentDuplicateIcon, 
   DocumentTextIcon, 
@@ -10,6 +11,7 @@ import {
   ShieldCheckIcon, 
   LockClosedIcon 
 } from '@heroicons/react/24/outline';
+import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
 const ComparisonSection = () => {
   const comparisonData = [
@@ -116,22 +118,28 @@ const ComparisonSection = () => {
 
   return (
     <section className="bg-white py-12 px-4 sm:px-8 lg:px-16">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-900 text-center mb-10">
-        Comparison between Other Technologies vs GudMed Technology
-      </h2>
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-900 text-center mb-10 flex items-center justify-center">
+  Comparison between Other Technologies vs GudMed Technology
+  
+</h2>
       <div className="overflow-x-auto shadow-xl rounded-lg">
         <table className="table-auto border-collapse w-full bg-white rounded-lg">
-          <thead className="bg-blue-700 text-white text-sm uppercase">
+          <thead className="bg-blue-400 text-white text-sm uppercase">
             <tr>
-              <th className="border border-blue-800 px-4 sm:px-6 py-3 text-left font-bold">
+              <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold">
                 Aspect
               </th>
-              <th className="border border-blue-800 px-4 sm:px-6 py-3 text-left font-bold">
+              <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold">
                 Other Technology
               </th>
-              <th className="border border-blue-800 px-4 sm:px-6 py-3 text-left font-bold">
-                GudMed Technology
-              </th>
+              <div className='flex items-center space-x-8 w-[100%]'>
+  <th className="border-blue-800 px-4 sm:px-6 py-3 text-left font-bold flex items-center text-[#2E4168]">
+    GudMed Technology
+    <CheckCircleIcon className="h-6 w-6 text-[#2E4168] items-center ml-4" /> {/* Using a green color for the checkmark */}
+  </th>
+</div>
+
+
             </tr>
           </thead>
           <tbody>

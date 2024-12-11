@@ -3,8 +3,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const quickLinksLeft = ["Home", "About Us", "Services", "Our Cases"];
-  const quickLinksRight = ["Other Links", "Consulting", "Finance", "Testimonials"];
+  const quickLinksLeft = [
+    { name: "Home", link: "/" },
+    { name: "About Us", link: "/about" },
+    { name: "Services", link: "/services" },
+    { name: "Doctors", link: "/doctors" }
+  ];
+  
+  const quickLinksRight = [
+    { name: "IPD", link: "/hospital/ipd" },
+    { name: "OPD", link: "/hospital/opd" },
+    { name: "Hospital", link: "/hospital" },
+    { name: "Team", link: "/team" }
+  ];
+  
   const socialIcons = [
     { iconClass: "fab fa-facebook-f", link: "https://www.facebook.com/GudMedicare/" },
 
@@ -38,17 +50,22 @@ const Footer = () => {
           <h2 className="text-xl font-bold mb-4 text-black tracking-wide">Quick Links</h2>
           <hr className="border-t-2 w-12 border-primaryLight mb-6" />
           <ul className="grid grid-cols-2 gap-6 text-sm space-y-2">
-            {quickLinksLeft.map((item, index) => (
-              <li key={index}>
-                <Link to="#" className="hover:text-primaryLight transition-colors duration-300">{item}</Link>
-              </li>
-            ))}
-            {quickLinksRight.map((item, index) => (
-              <li key={index}>
-                <Link to="#" className="hover:text-primaryLight transition-colors duration-300">{item}</Link>
-              </li>
-            ))}
-          </ul>
+  {quickLinksLeft.map((item, index) => (
+    <li key={index}>
+      <Link to={item.link} className="hover:text-primaryLight transition-colors duration-300">
+        {item.name}
+      </Link>
+    </li>
+  ))}
+  {quickLinksRight.map((item, index) => (
+    <li key={index}>
+      <Link to={item.link} className="hover:text-primaryLight transition-colors duration-300">
+        {item.name}
+      </Link>
+    </li>
+  ))}
+</ul>
+
         </div>
 
         {/* Get In Touch Section */}
