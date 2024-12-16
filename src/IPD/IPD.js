@@ -8,7 +8,7 @@ const IPDHomeIPD = () => {
   return (
     <div className="w-full relative overflow-hidden p-8">
       {/* Header Section for IPD Home */}
-      <h1 className="text-5xl font-extrabold text-center  text-blue-800 mb-6 tracking-wide">
+      <h1 className="text-5xl font-extrabold text-center  text-[#2E4168] mb-6 tracking-wide">
     Welcome to GudMed's In-Patient Department (IPD)
 </h1>
 <p className="text-center text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">

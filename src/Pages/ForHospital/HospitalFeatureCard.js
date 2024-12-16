@@ -16,13 +16,13 @@ const HospitalFeatureCard = ({ imageSrc, title, description, features }) => {
 
                 {/* Text Content Frame */}
                 <div className="w-full lg:w-1/2 p-8 lg:p-10 flex flex-col justify-start bg-gray-50">
-                    <h3 className="text-2xl font-bold text-blue-800 mb-4 mt-0">{title}</h3>
+                    <h3 className="text-2xl font-bold text-[#2E4168] mb-4 mt-0">{title}</h3>
                     <p className="text-gray-700 mb-6">{description}</p>
-                    <h4 className="text-lg font-semibold text-blue-800 mb-3">Key Features:</h4>
+                    <h4 className="text-lg font-semibold text-[#2E4168] mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                         {features.map((feature, index) => (
                             <li key={index} className="flex items-start">
-                                <span className="text-blue-600 mr-2">•</span>
+                                <span className="text-[#2E4168] mr-2">•</span>
                                 <p className="text-gray-700">{feature}</p>
                             </li>
                         ))}

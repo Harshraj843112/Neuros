@@ -6,7 +6,7 @@ import IPDdischarge2 from '../img/ipdimage2.jpg';
 const SliderIPD = () => {
     return (
         <div className="relative w-full bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-            <h2 className="text-lg font-semibold text-center mb-4">Compare Images</h2>
+            <h2 className="text-lg font-semibold text-center mb-4 text-[#2E4168]">Compare Images</h2>
             <div className="w-full" style={{ height: '100%' }}> {/* Full-height container */}
                 <ReactCompareSlider
                     itemOne={

@@ -35,10 +35,10 @@ const ContactHome = () => (
             <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10">
                 {/* Contact Form Section */}
                 <div className="flex-1 p-6 bg-gradient-to-r from-blue-50 to-white rounded-lg">
-                    <h2 className="text-2xl font-bold text-blue-800 text-center mb-4">
+                    <h2 className="text-2xl font-bold text-[#2E4168] text-center mb-4">
                         We’d Love to Hear from You
                     </h2>
-                    <p className="text-gray-600 text-center mb-6">
+                    <p className="text-[#2E4168] text-center mb-6">
                         Whether you have a question or need assistance, we’re here to help.
                     </p>
                     <ContactForm />
@@ -46,8 +46,8 @@ const ContactHome = () => (
 
                 {/* Google Map Section */}
                 <div className="flex-1 p-6 rounded-lg text-gray-700">
-                    <h2 className="text-xl font-semibold text-blue-800 mb-4">Our Location</h2>
-                    <hr className="border-t-2 w-12 border-gray-300 mb-6" />
+                    <h2 className="text-xl font-semibold text-[#2E4168] mb-4">Our Location</h2>
+                    <hr className="border-t-2 w-12 border-[#2E4168] mb-6" />
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.6257960733506!2d77.078248!3d28.490814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19409c876b99%3A0xcbb1f17f595e75f3!2sGudMed!5e0!3m2!1sen!2sin!4v1729791743072!5m2!1sen!2sin"
                         width="100%"
@@ -57,14 +57,14 @@ const ContactHome = () => (
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                         title="GudMed Google Map"
-                        className="rounded-lg shadow-md"
+                        className="rounded-lg shadow-md text-[#2E4168]"
                     ></iframe>
                     <div className="flex items-center space-x-4 mt-4">
-                        <i className="fas fa-map-marker-alt text-blue-600 text-lg"></i>
+                        <i className="fas fa-map-marker-alt text-[#2E4168] text-lg"></i>
                         <Link
                             to="https://maps.app.goo.gl/9ALKd9Jb18nmeAa68"
                             target="_blank"
-                            className="text-lg text-blue-600 underline hover:text-blue-400 transition-colors duration-300"
+                            className="text-lg text-[#2E4168] underline hover:text-[#2E4168] transition-colors duration-300"
                         >
                             View on Google Maps
                         </Link>

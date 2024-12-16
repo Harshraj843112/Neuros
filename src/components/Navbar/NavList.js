@@ -3,45 +3,45 @@ const NavList = [
     id: "1",
     list: "ABOUT US",
     link: "/about", // Assuming "HOME" links to the homepage
-    dropdown: [
-      {
-        title: "Artificial Intelligence",
-        items: [
-          "Neural Networks",
-          "AI Agency",
-          "Image Generator",
-          "Voice Generator",
-          "Chatbot",
-          "AI Solutions",
-        ],
-      },
-      {
-        title: "AI Services",
-        items: [
-          "AI Marketing",
-          "AI Startup",
-          "Vision",
-          "AI Consulting",
-          "Video Voiceover",
-          "AI Software / SAAS",
-          "Science Lab",
-        ],
-      },
-      {
-        title: "Creative Bureau",
-        items: [
-          "IT Services",
-          "Business",
-          "Gadget",
-          "Application",
-          "Intro",
-          "Dark Version",
-        ],
-      },
-      {
-        image: require("../../img/NavbarImg.jpg"), // Adjust the path as needed
-      },
-    ],
+    // dropdown: [
+    //   {
+    //     title: "Artificial Intelligence",
+    //     items: [
+    //       "Neural Networks",
+    //       "AI Agency",
+    //       "Image Generator",
+    //       "Voice Generator",
+    //       "Chatbot",
+    //       "AI Solutions",
+    //     ],
+    //   },
+    //   {
+    //     title: "AI Services",
+    //     items: [
+    //       "AI Marketing",
+    //       "AI Startup",
+    //       "Vision",
+    //       "AI Consulting",
+    //       "Video Voiceover",
+    //       "AI Software / SAAS",
+    //       "Science Lab",
+    //     ],
+    //   },
+    //   {
+    //     title: "Creative Bureau",
+    //     items: [
+    //       "IT Services",
+    //       "Business",
+    //       "Gadget",
+    //       "Application",
+    //       "Intro",
+    //       "Dark Version",
+    //     ],
+    //   },
+    //   {
+    //     image: require("../../img/NavbarImg.jpg"), // Adjust the path as needed
+    //   },
+    // ],
   },
   {
     id: "2",

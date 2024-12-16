@@ -40,7 +40,7 @@ const TeamHome = () => {
 
             {/* Key Team Members */}
             <h2 className="text-3xl font-semibold text-center text-[#2E4168] mb-8">Key Team Members</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10m text-[#2E4168] ">
                 {teamMembers.map((member, index) => (
                     <TeamMemberCard
                         key={index}

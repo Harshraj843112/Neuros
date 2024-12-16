@@ -33,7 +33,7 @@ const ipdBenefits = [
 const IPDBenefitsSectionIPD = () => {
     return (
         <section className="bg-gray-100 p-6 rounded-lg mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-center">Benefits of Our IPD Services</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-center text-[#2E4168]">Benefits of Our IPD Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {ipdBenefits.map((benefit, index) => (
                     <BenefitItemIPD

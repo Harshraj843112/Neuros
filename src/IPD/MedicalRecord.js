@@ -68,13 +68,13 @@ const MedicalRecord = () => {
         className="max-w-7xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200"
       >
         <div className="p-8">
-          <h1 className="text-4xl font-extrabold text-blue-700 mb-6 text-center">
+          <h1 className="text-4xl font-extrabold text-[#2E4168] mb-6 text-center">
             Transforming Medical Records for the Future
           </h1>
           <p className="text-gray-600 text-center mb-8">
             At GudMed, we bring simplicity and security to managing medical records by offering specialized services for scanning, secure data storage, and complete digitization. Whether it’s Rheumatology, Radiology, or Pathology files, we’ve got you covered.
           </p>
-          <h1 className="text-4xl font-extrabold text-blue-700 mb-6 text-center">
+          <h1 className="text-4xl font-extrabold text-[#2E4168] mb-6 text-center">
             Our Services
           </h1>
 
@@ -82,12 +82,12 @@ const MedicalRecord = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center text-center border border-gray-200">
                 <service.icon className="text-blue-500 text-6xl mb-4" />
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">{service.title}</h2>
+                <h2 className="text-2xl font-semibold text-[#2E4168] mb-2">{service.title}</h2>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="list-disc text-left ml-6 text-gray-600">
                   {service.items.map((item, idx) => (
                     <li key={idx}>
-                      <span className="font-bold text-black">{item.label}:</span> {item.details}
+                      <span className="font-bold text-[#2E4168]">{item.label}:</span> {item.details}
                     </li>
                   ))}
                 </ul>
@@ -96,13 +96,13 @@ const MedicalRecord = () => {
           </div>
 
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">Why Choose Us?</h2>
+            <h2 className="text-2xl font-bold text-[#2E4168] text-center mb-8">Why Choose Us?</h2>
             <ul className="grid gap-8 lg:grid-cols-2">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center bg-white p-6 shadow-md rounded-lg border border-gray-200">
                   <feature.icon className="text-blue-500 text-4xl mr-4" />
-                  <span className="text-gray-600">
-                    <span className="font-bold text-black">{feature.title}:</span> {feature.description}
+                  <span className="text-[#2E4168]">
+                    <span className="font-bold text-[#2E4168]">{feature.title}:</span> {feature.description}
                   </span>
                 </li>
               ))}

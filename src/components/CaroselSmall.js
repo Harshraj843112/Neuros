@@ -45,7 +45,7 @@ const responsive = {
 const DoctorsCarousel = () => {
     return (
         <div className="w-full mt-20">
-            <h2 className="text-4xl font-bold text-center mt-12 mb-10">Our Advisory Board</h2>
+            <h2 className="text-4xl font-bold text-center mt-12 mb-10 text-[#2E4168]">Our Advisory Board</h2>
             <Carousel
                 autoPlay
                 autoPlaySpeed={5000} // Slow speed for smooth scrolling
@@ -60,7 +60,7 @@ const DoctorsCarousel = () => {
             >
                 {doctors.map((doctor, index) => (
                     <div key={index} className="w-10/12 mx-auto bg-white p-6 rounded-lg shadow-lg group hover:shadow-xl transition duration-300 ease-in-out">
-                        <div className="w-full h-64 flex justify-center items-center mb-4"> {/* Adjusted container height */}
+                        <div className="w-full h-40 flex justify-center items-center mb-4"> {/* Adjusted container height */}
                             <img
                                 src={doctor.image}
                                 alt={doctor.name}

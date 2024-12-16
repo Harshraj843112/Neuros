@@ -14,9 +14,10 @@ const TechnologyPage = () => (
   <div className="bg-white min-h-screen py-12 px-6">
     {/* Header */}
     <div className="text-center mb-16">
-      <h1 className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-500 mb-6">
-        GudMed’s Technology
-      </h1>
+    <h1 className="text-4xl font-extrabold font-sans text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500 mb-8 p-10">
+  GudMed’s Technology
+</h1>
+
       <p className="text-gray-700 max-w-3xl mx-auto text-lg">
         GudMed’s technology is designed to optimize healthcare operations through automation and intelligent tools. Our platform integrates seamlessly with hospital systems, enabling real-time access to patient data, reports, and medication history. The use of AI helps hospitals reduce workload, minimize errors, and deliver faster, more
         accurate care. With our advanced digitization and data integration capabilities, you can elevate your healthcare services to the next level.
@@ -26,9 +27,9 @@ const TechnologyPage = () => (
     {/* Technology Section */}
     <section className="mb-20">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-blue-700 relative inline-block">
+        <h2 className="text-3xl font-bold text-[#2E4168] relative inline-block">
           Technology
-          <div className="h-1 w-16 bg-blue-400 absolute left-1/2 -translate-x-1/2 mt-2"></div>
+          <div className="h-1 w-16 bg-[#2E4168] absolute left-1/2 -translate-x-1/2 mt-2"></div>
         </h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -58,9 +59,9 @@ const TechnologyPage = () => (
     {/* Artificial Intelligence Section */}
     <section>
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-blue-700 relative inline-block">
+        <h2 className="text-3xl font-bold text-[#2E4168] relative inline-block">
           Artificial Intelligence
-          <div className="h-1 w-16 bg-blue-400 absolute left-1/2 -translate-x-1/2 mt-2"></div>
+          <div className="h-1 hover:block w-16 bg-[#2E4168] absolute left-1/2 -translate-x-1/2 mt-2"></div>
         </h2>
       </div>
       <p className="text-gray-700 max-w-3xl mx-auto text-lg mb-10">

@@ -10,7 +10,7 @@ const BenefitItemIPD = ({ icon, title, description, image }) => {
       
       {/* Text Content */}
       <div className="flex-1">
-        <h3 className="text-xl font-bold">{title}</h3>
+        <h3 className="text-xl font-bold text-[#2E4168]">{title}</h3>
         <p className="text-gray-600">{description}</p>
       </div>
       

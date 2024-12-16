@@ -25,16 +25,16 @@ const BenefitsList = () => {
 
                 {/* Content Section */}
                 <div className="w-full lg:w-1/2 space-y-6">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-blue-900 text-center lg:text-left">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#2E4168] text-center lg:text-left">
                         Stop Storing Data in Archived MRD Files—Go Digital with GudMed
                     </h3>
-                    <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
+                    <p className="text-sm sm:text-base lg:text-lg text-[#2E4168] leading-relaxed">
                     Many hospitals still rely on physical Medical Record Departments (MRDs) to store patient data for years, often in overcrowded, paper-based archives. This method is not only inefficient but also prone to errors, loss, and difficulties in retrieval. With GudMed, you can put an end to these storage challenges by digitizing all patient records.
                     </p>
                     <ul className="space-y-4">
                         {benefits.map((benefit, index) => (
                             <li key={index} className="flex items-center">
-                                <FaCheckCircle className="text-blue-500 mr-3" size={22} />
+                                <FaCheckCircle className="text-[#2E4168]mr-3" size={22} />
                                 <span className="text-gray-800 font-medium text-sm sm:text-base lg:text-lg">
                                     {benefit}
                                 </span>

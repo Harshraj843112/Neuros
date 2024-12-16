@@ -1,15 +1,16 @@
 import React from 'react';
+import { FaHandPointRight } from 'react-icons/fa';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
-import { 
-  DocumentDuplicateIcon, 
-  DocumentTextIcon, 
-  MagnifyingGlassCircleIcon, 
-  ChartBarIcon, 
-  LinkIcon, 
-  ClipboardDocumentCheckIcon, 
-  BellAlertIcon, 
-  ShieldCheckIcon, 
-  LockClosedIcon 
+import {
+  DocumentDuplicateIcon,
+  DocumentTextIcon,
+  MagnifyingGlassCircleIcon,
+  ChartBarIcon,
+  LinkIcon,
+  ClipboardDocumentCheckIcon,
+  BellAlertIcon,
+  ShieldCheckIcon,
+  LockClosedIcon
 } from '@heroicons/react/24/outline';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
@@ -118,55 +119,58 @@ const ComparisonSection = () => {
 
   return (
     <section className="bg-white py-12 px-4 sm:px-8 lg:px-16">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-900 text-center mb-10 flex items-center justify-center">
-  Comparison between Other Technologies vs GudMed Technology
-  
-</h2>
-      <div className="overflow-x-auto shadow-xl rounded-lg">
-        <table className="table-auto border-collapse w-full bg-white rounded-lg">
-          <thead className="bg-blue-400 text-white text-sm uppercase">
-            <tr>
-              <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold">
-                Aspect
-              </th>
-              <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold">
-                Other Technology
-              </th>
-              <div className='flex items-center space-x-8 w-[100%]'>
-  <th className="border-blue-800 px-4 sm:px-6 py-3 text-left font-bold flex items-center text-[#2E4168]">
-    GudMed Technology
-    <CheckCircleIcon className="h-6 w-6 text-[#2E4168] items-center ml-4" /> {/* Using a green color for the checkmark */}
-  </th>
-</div>
-
-
-            </tr>
-          </thead>
-          <tbody>
-            {comparisonData.map((item, index) => (
-              <tr
-                key={index}
-                className={`${
-                  index % 2 === 0 ? "bg-gray-50" : "bg-white"
+    <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2E4168] text-center mb-10 flex items-center justify-center">
+      Comparison between Other 
+      <span className="flex items-center ml-2">
+        vs
+        <span className="flex items-center ml-2">
+          <span>GudMed </span>
+          <span className="ml-2 text-[#2E4168] items-center mt-1">
+            <FaHandPointRight size={32} /> {/* Right-pointing hand icon */}
+          </span>
+        </span>
+      </span>
+    </h2>
+    <div className="overflow-x-auto shadow-xl rounded-lg">
+      <table className="table-auto border-collapse w-full bg-white rounded-lg">
+        <thead className="bg-blue-400 text-white text-sm uppercase">
+          <tr>
+            <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold">
+              Aspect
+            </th>
+            <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold">
+              Other Technology
+            </th>
+            <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold text-[#2E4168]">
+              GudMed Technology
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparisonData.map((item, index) => (
+            <tr
+              key={index}
+              className={`${index % 2 === 0 ? "bg-gray-50" : "bg-white"
                 } hover:bg-blue-100 transition-transform duration-300`}
-              >
-                <td className="border border-gray-300 px-4 sm:px-6 py-4 text-blue-900 font-semibold">
-                  {item.aspect}
-                </td>
-                <td className="border border-gray-300 px-4 sm:px-6 py-4 text-gray-600">
-                  {item.other.icon}
-                  {item.other.text}
-                </td>
-                <td className="border border-gray-300 px-4 sm:px-6 py-4 text-green-700 font-medium">
-                  {item.gudmed.icon}
-                  {item.gudmed.text}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </section>
+            >
+              <td className="border border-gray-300 px-4 sm:px-6 py-4 text-blue-900 font-semibold">
+                {item.aspect}
+              </td>
+              <td className="border border-gray-300 px-4 sm:px-6 py-4 text-gray-600">
+                {item.other.icon}
+                {item.other.text}
+              </td>
+              <td className="border border-gray-300 px-4 sm:px-6 py-4 text-green-700 font-medium">
+                {item.gudmed.icon}
+                {item.gudmed.text}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
   );
 };
 

@@ -9,7 +9,7 @@ const TeamMemberCard = ({ title, name, description }) => (
         <h3 className="text-2xl font-extrabold text-gray-800 group-hover:text-[#2E4168] transition-colors duration-300">
             {name}
         </h3>
-        <p className="text-blue-500 font-medium italic mb-4">{title}</p>
+        <p className="text-[#2E4168] font-medium italic mb-4">{title}</p>
         
         {/* Divider */}
         <hr className="border-t-2 border-[#2E4168] mb-4 group-hover:border-[#2E4168] transition-colors duration-300" />

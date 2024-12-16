@@ -30,8 +30,8 @@ const benefits = [
 
 const CTASection = () => {
   return (
-    <section className="py-12 px-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-lg text-center md:py-16 lg:px-20">
-      <h3 className="text-2xl font-bold text-blue-900 mb-6 sm:text-3xl md:text-4xl">
+    <section className="py-12 px-6 bg-gray-100 rounded-xl shadow-lg text-center md:py-16 lg:px-20">
+      <h3 className="text-2xl font-bold text-[#2E4168] mb-6 sm:text-3xl md:text-4xl">
         The Smart Hospital of Tomorrow – Today with{" "}
         <span className="text-blue-700">GudMed</span>
       </h3>
@@ -47,7 +47,7 @@ const CTASection = () => {
           >
             <div className="mb-4 md:mb-0 md:mr-6">{benefit.icon}</div>
             <div>
-              <strong className="text-blue-900 text-lg md:text-xl">
+              <strong className="text-[#2E4168] text-lg md:text-xl">
                 {benefit.title}
               </strong>
               <p className="text-gray-700 mt-2">{benefit.description}</p>
@@ -55,13 +55,13 @@ const CTASection = () => {
           </li>
         ))}
       </ul>
-      <h4 className="text-xl font-semibold text-blue-900 mt-10 mb-6 sm:text-2xl md:text-3xl">
+      <h4 className="text-xl font-semibold text-[#2E4168] mt-10 mb-6 sm:text-2xl md:text-3xl">
         Join the Future of Healthcare Today
       </h4>
       <p className="text-base text-gray-800 mb-8 sm:text-lg md:text-xl">
       Embrace GudMed’s smart hospital solutions and leave behind the inefficiencies of physical records and manual processes. Together, we can revolutionize how hospitals operate, ensuring better outcomes for patients and streamlined efficiency for healthcare providers.
       </p>
-      <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:bg-blue-700 sm:px-8 sm:py-4">
+      <button className="px-6 py-3 bg-[#2E4168] text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:bg-blue-700 sm:px-8 sm:py-4">
         Get Started with GudMed
       </button>
     </section>

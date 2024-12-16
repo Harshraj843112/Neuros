@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules"; // Correct import
+import { Autoplay } from "swiper/modules";
 
 import AiimsDelhi from "../img/AIIMS_New_Delhi.png";
 import Sharda from "../img/sharda.jpg";
@@ -22,80 +22,63 @@ const ClientLogo = ({ src, alt }) => (
 );
 
 const OurClient = () => {
+  const clients = [
+    { src: AiimsDelhi, alt: "AIIMS Delhi" },
+    { src: Patna, alt: "AIIMS Patna" },
+    { src: Jodhpur, alt: "AIIMS Jodhpur" },
+    { src: Rishikesh, alt: "AIIMS Rishikesh" },
+    { src: Amazon, alt: "Amazon Pharmacy" },
+    { src: GangaRam, alt: "Sir Ganga Ram Hospital" },
+    { src: Psri, alt: "PSRI Hospital" },
+    { src: RedClif, alt: "Redcliffe Diagnostics" },
+    { src: Sharda, alt: "Sharda Hospital" },
+    { src: Appolo, alt: "Apollo Hospital" },
+  ];
+
   return (
     <div className="bg-white py-10">
       <div className="text-center mb-12">
-        <h2 className="text-5xl font-extrabold tracking-wide mb-4">
-          <span className="text-customGreen mr-2">Our</span>
-          <span className="text-customBlueDark">Clientele</span>
+        <h2 className="text-5xl font-extrabold tracking-wide mb-4 space-x-4">
+          <span className="text-[#2E4168] mr-2">Our</span>
+          <span className="text-[#2E4168]">Clientele</span>
         </h2>
       </div>
 
       <div className="w-11/12 mx-auto">
         <Swiper
-          spaceBetween={20}
-          slidesPerView={5}
+          spaceBetween={14}
+          slidesPerView={4} // Show 4 slides at a time
+          slidesPerGroup={4} // Move 1 slide at a time
           modules={[Autoplay]}
           autoplay={{
             delay: 0, // No delay for continuous sliding
-            disableOnInteraction: false, // Ensure autoplay continues after interaction
+            disableOnInteraction: false, // Keep autoplay active even after interaction
           }}
-          speed={3000} // Adjust for smoothness
-          loop={true} // Infinite loop
-          freeMode={true} // Continuous non-snapping movement
+          speed={3000} // Faster sliding speed
+          loop={true} // Enable infinite loop
           breakpoints={{
-            // Desktop and large screens
             1200: {
-              slidesPerView: 6,
+              slidesPerView: 4,
             },
-            // Tablets and large screens
             1024: {
-              slidesPerView: 5,
+              slidesPerView: 4,
             },
-            // Small tablets and large mobile
             768: {
               slidesPerView: 3,
             },
-            // Mobile landscape
             480: {
-              slidesPerView: 3,
+              slidesPerView: 2,
             },
-            // Small mobile screens
             320: {
               slidesPerView: 2,
             },
           }}
         >
-          <SwiperSlide>
-            <ClientLogo src={AiimsDelhi} alt="AIIMS Delhi" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={Amazon} alt="Amazon Pharmacy" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={Patna} alt="AIIMS Patna" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={Psri} alt="PSRI Hospital" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={Appolo} alt="Apollo Hospital" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={GangaRam} alt="Sir Ganga Ram Hospital" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={Jodhpur} alt="AIIMS Jodhpur" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={Sharda} alt="Sharda Hospital" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={RedClif} alt="Redcliffe Diagnostics" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientLogo src={Rishikesh} alt="AIIMS Rishikesh" />
-          </SwiperSlide>
+          {clients.concat(clients).map((client, index) => (
+            <SwiperSlide key={index}>
+              <ClientLogo src={client.src} alt={client.alt} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

@@ -17,6 +17,7 @@ import DoctorHome from './Doctor/DoctorHome';
 import IPDHomeIPD from './IPD/IPD';
 import OPDHome from './components/OPD/OPDHome';
 import TeamHome from './components/Team/TeamHome';
+import NewFooter from './components/NewFooter';
 
 const App = () => {
   return (
@@ -33,7 +34,8 @@ const App = () => {
         <Route path="/hospital/ipd" element={<IPDHomeIPD></IPDHomeIPD>}></Route>
         <Route path="/hospital/opd" element={<OPDHome></OPDHome>}></Route>
       </Routes>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
+      <NewFooter></NewFooter>
     </div>
   );
 };

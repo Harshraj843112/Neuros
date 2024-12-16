@@ -63,7 +63,7 @@ const GudMedServices = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 lg:p-16">
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+      <h1 className="text-4xl font-bold text-center text-[#2E4168] mb-8">
         Our Services at GudMed
       </h1>
       <p className="text-lg text-center text-gray-600 max-w-2xl mx-auto mb-12">
@@ -82,14 +82,14 @@ const GudMedServices = () => {
             <div className="flex items-center justify-center mb-6">
               {service.icon}
             </div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+            <h2 className="text-2xl font-semibold text-[#2E4168] mb-4 text-center">
               {service.title}
             </h2>
             <p className="text-gray-600 text-sm mb-6 text-center">
               {service.description}
             </p>
             <div className="mb-4">
-              <h3 className="text-lg font-medium text-gray-800 mb-2">
+              <h3 className="text-lg font-medium text-[#2E4168] mb-2">
                 How It Works:
               </h3>
               <ul className="space-y-2">
@@ -102,7 +102,7 @@ const GudMedServices = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-medium text-gray-800 mb-2">
+              <h3 className="text-lg font-medium text-[#2E4168] mb-2">
                 Benefits:
               </h3>
               <ul className="space-y-2">

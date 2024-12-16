@@ -60,27 +60,22 @@ const WhyGudmedUnique = () => {
       description:
         "No matter the size of your organization, GudMed offers flexible, scalable solutions tailored to your needs. From small clinics to large hospitals, our technology grows with you.",
     },
-    {
-      icon: <FaHospital className="text-blue-600 text-4xl mb-3" />,
-      title: "Join the GudMed Revolution",
-      description:
-        "Partner with GudMed and embrace a smarter, more efficient future for healthcare. Contact us today to learn how we can transform your healthcare operations.",
-    },
+   
   ];
 
   return (
     <section className="bg-white py-16 px-6 lg:px-20">
       <div className="container mx-auto">
         <motion.h2
-          className="text-4xl lg:text-5xl font-bold text-blue-800 text-center mb-8"
+          className="text-4xl lg:text-5xl font-bold text-[#2E4168] text-center mb-8"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Why GudMed is Unique
+          Why GudMed is Unique  ?
         </motion.h2>
         <motion.p
-          className="text-lg font-medium text-gray-800 text-center mb-12"
+          className="text-xl font-medium text-gray-800 text-center mb-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -95,15 +90,15 @@ const WhyGudmedUnique = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0, delay: index * 0.1 }}
             >
               <div className="flex flex-col items-center text-center">
                 {section.icon}
-                <h3 className="text-2xl font-semibold text-blue-800 mb-4">
+                <h3 className="text-2xl font-semibold text-[#2E4168] mb-4">
                   {section.title}
                 </h3>
               </div>
-              <p className="text-gray-700 mb-4">{section.description}</p>
+              <p className="text-[#2E4168] mb-4">{section.description}</p>
               {section.points && (
                 <ul className="space-y-3">
                   {section.points.map((point, idx) => (
@@ -113,10 +108,31 @@ const WhyGudmedUnique = () => {
                     </li>
                   ))}
                 </ul>
+
               )}
+              
             </motion.div>
           ))}
         </div>
+        <div className="mt-16 bg-white  py-12 px-6 rounded-xl shadow-lg text-center">
+  <div className="max-w-3xl mx-auto">
+    <h3 className="text-3xl lg:text-4xl font-bold text-[#2E4168] mb-4 leading-tight">
+      Join the GudMed Revolution
+    </h3>
+    <p className="text-lg font-medium text-gray-700 mb-6">
+      Partner with GudMed and embrace a smarter, more efficient future for healthcare. Contact us today to learn how we can transform your healthcare operations.
+    </p>
+    <div className="mt-6">
+      <a
+        href="/contacts" // This can be changed to your contact page link
+        className="bg-[#2E4168] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-[#1A3051] hover:shadow-lg transition-all duration-300"
+      >
+        Contact Us Today
+      </a>
+    </div>
+  </div>
+</div>
+
       </div>
     </section>
   );

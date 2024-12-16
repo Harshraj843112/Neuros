@@ -51,7 +51,7 @@ const ProcessStepsOPD = () => (
         {/* <ImageSlider /> */}
 
         {/* Steps Section */}
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">
+        <h2 className="text-3xl font-bold text-center text-[#2E4168] mb-8">
             Step-by-Step Process of OPD Prescription Digitization
         </h2>
 
@@ -79,7 +79,7 @@ const ProcessStepsOPD = () => (
                         <div className="text-sm font-semibold text-blue-600">
                             Step {index + 1}
                         </div>
-                        <h3 className="text-xl font-bold text-gray-800 mt-2 mb-4">
+                        <h3 className="text-xl font-bold text-[#2E4168] mt-2 mb-4">
                             {step.title}
                         </h3>
                         <p className="text-gray-600">{step.description}</p>

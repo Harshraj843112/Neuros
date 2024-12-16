@@ -18,6 +18,7 @@ import DoctorsCarousel from '../components/CaroselSmall';
 import ComparisonSection from '../components/ComparisonSection';
 import WhyGudmedUnique from '../components/WhyGudmedUnique';
 import TechnologyPage from '../components/TechnologyPage';
+import CounterSection from '../components/CounterSection';
 
 
 
@@ -25,12 +26,13 @@ import TechnologyPage from '../components/TechnologyPage';
 const Home = () => {
   return (
     <div className="flex flex-col space-y-0 overflow-hidden"> {/* This removes any vertical gap between the components */}
-     
+    
       <Slider />
       <HeroSection></HeroSection>
       <AnimatedText></AnimatedText>
       <ImageComparison></ImageComparison>
-      <About></About>
+      {/* <About></About> */}
+      <CounterSection></CounterSection>
       <TechnologyPage></TechnologyPage>
       <FeaturesSection></FeaturesSection>
       {/* <PricingSection></PricingSection> */}
@@ -39,11 +41,11 @@ const Home = () => {
      <KnowledgePartnerCardSection></KnowledgePartnerCardSection>
       
 
-      <TestimonialSection></TestimonialSection>
-      <DoctorsCarousel></DoctorsCarousel>
-      <Faq></Faq>
+      {/* <TestimonialSection></TestimonialSection> */}
+      {/* <DoctorsCarousel></DoctorsCarousel> */}
+      {/* <Faq></Faq> */}
 
-      <Blog></Blog>
+      {/* <Blog></Blog> */}
       <OurClient></OurClient>
 
 

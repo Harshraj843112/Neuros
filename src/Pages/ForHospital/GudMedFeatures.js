@@ -85,7 +85,7 @@ const GudMedFeatures = () => {
                         className="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg shadow-md transition-transform transform hover:scale-105"
                     >
                         <div className="mb-4">{feature.icon}</div>
-                        <h4 className="text-xl font-semibold text-blue-800 mb-3">{feature.title}</h4>
+                        <h4 className="text-xl font-semibold text-[#2E4168] mb-3">{feature.title}</h4>
                         <div className="text-gray-700 text-sm sm:text-base leading-relaxed">
                             {feature.description}
                         </div>

@@ -1,101 +1,179 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { motion } from "framer-motion"; // Import Framer Motion
-import "swiper/css";
+import React, { useState, useEffect, useRef } from "react";
+import AliceCarousel from "react-alice-carousel"; // For carousel behavior
+import "react-alice-carousel/lib/alice-carousel.css"; // AliceCarousel CSS
+import "animate.css"; // For slide-in animations
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-// Import your images
-import FramerMotion1 from "../img/FramerMotion1.pnj.jpg";
+// Your Image Import
 import FramerMotion2 from "../img/Presentation1_page-0001.jpg";
 
-// Define the slides with titles and gradient words
+// Slide Data
 const slides = [
-
   {
-    image: FramerMotion2,
-    title: "Harness the <br/> Power of Artificial <br/> Intelligence",
-    gradientWords: ["Artificial", "Intelligence"],
-    textOverlay: false, // Text is above the image
-    description:
-      "Highlight the potential benefits of Neural Networks,<br/> such as improved decision-making, predictive analytics,<br/> and automation.",
+    title: "Harness the Power <br> of GudMed AI",
+    gradientWords: ["GudMed", "AI"],
+    gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
   },
   {
-    image: FramerMotion1,
-    title: "Revolutionize your business <br/> with cutting-edge Neural <br/> Network solutions",
+    title:
+      "Revolutionize your business <br> with cutting-edge Neural <br> Network solutions",
     gradientWords: ["Neural", "Network"],
-    textOverlay: false, // Text overlays the image
+    gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
   },
-  
+  {
+    title: "Unlock these Benefits",
+    gradientWords: ["Benefits"],
+    gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
+    benefits: [
+      {
+        heading: "Improved Decision-Making:",
+        description: "Make real-time, data-driven decisions for better patient outcomes.",
+        gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
+      },
+      {
+        heading: "Predictive Analytics:",
+        description: "Anticipate patient needs with precision for proactive care.",
+        gradient: "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500",
+      },
+      {
+        heading: "Automation:",
+        description: "Streamline processes from discharge summaries to prescription digitization.",
+        gradient: "bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500",
+      },
+    ],
+  },
+  {
+    title:
+      "Explore how GudMed is <br> transforming healthcare  <br>one innovation at a time.",
+    gradientWords: ["GudMed", "transforming", "innovation"],
+  },
 ];
 
 const Slider = () => {
-  // Animation Variants for the text
-  const textVariants = {
-    hidden: { opacity: 0, y: -80 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const carouselRef = useRef();
+
+  const carouselSettings = {
+    autoPlay: true,
+    autoPlayInterval: 3000, // Text changes every 3 seconds
+    infinite: true,
+    disableButtonsControls: true, // Hide default controls
+    disableDotsControls: true,
+    onSlideChanged: (e) => {
+      setCurrentSlideIndex(e.item);
+    },
+    responsive: {
+      0: {
+        items: 1, // 1 slide on mobile
+      },
+      768: {
+        items: 1, // 2 slides on tablet
+      },
+      1024: {
+        items: 1, // 3 slides on laptop and desktop
+      },
+    },
   };
+
+  // Handle Next Slide
+  const handleNext = () => {
+    carouselRef.current?.slideNext();
+  };
+
+  // Handle Previous Slide
+  const handlePrev = () => {
+    carouselRef.current?.slidePrev();
+  };
+
+  const currentSlide = slides[currentSlideIndex];
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white">
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        loop={true}
-        className="w-full max-w-full"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="relative">
-            {/* Text above the image */}
-            <motion.div
-              className="relative w-full sm:w-10/12 mx-auto px-4 py-12 sm:py-20 md:py-28 flex flex-col lg:flex-row items-start lg:items-center"
-              variants={textVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {/* Title Section */}
-              <div className="w-full mb-6 lg:mb-0">
-                <h1 className="text-gray-800 text-center lg:text-left text-4xl sm:text-4xl lg:text-8xl font-semibold leading-tight">
-                  {slide.title.split(" ").map((word, i) =>
-                    slide.gradientWords.includes(word) ? (
-                      <span
-                        key={i}
-                        className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text"
-                      >
-                        {`${word} `}
-                      </span>
-                    ) : word === "<br/>" ? (
-                      <br key={i} />
-                    ) : (
-                      `${word} `
-                    )
-                  )}
+      {/* Text Carousel Section */}
+      <div className="relative w-full px-4 py-0 sm:py-16 -mt-40 md:mt-8 flex flex-col items-center">
+        <div className="relative w-full">
+          {/* AliceCarousel for Text Transition */}
+          <AliceCarousel
+            ref={carouselRef}
+            {...carouselSettings}
+            activeIndex={currentSlideIndex}
+            items={slides.map((slide, index) => (
+              <div
+                className="text-container animate__animated animate__slideInRight animate__faster"
+                key={index}
+              >
+                <h1 className="text-gray-800 text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold leading-tight">
+                  {/* Title with animation */}
+                  {slide.title.split(/<br\s*\/?>/).map((chunk, i) => (
+                    <React.Fragment key={i}>
+                      {chunk.split(" ").map((word, j) =>
+                        slide.gradientWords?.includes(word) ? (
+                          <span
+                            key={`${i}-${j}`}
+                            className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text animate__animated animate__slideInRight"
+                            style={{
+                              WebkitBackgroundClip: "text",
+                              color: "transparent",
+                            }}
+                          >
+                            {`${word} `}
+                          </span>
+                        ) : (
+                          `${word} `
+                        )
+                      )}
+                      {i < slide.title.split(/<br\s*\/?>/).length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
                 </h1>
+
+                {/* Benefits Section */}
+                {slide.benefits && (
+                  <ul className="mt-8 space-y-4 px-4 sm:px-8 lg:px-16">
+                    {slide.benefits.map((benefit, i) => (
+                      <li key={i} className="text-base sm:text-lg lg:text-xl text-gray-700 text-center">
+                        <span
+                          className={`${benefit.gradient} text-transparent bg-clip-text font-semibold`}
+                          style={{
+                            WebkitBackgroundClip: "text",
+                            color: "transparent",
+                          }}
+                        >
+                          {benefit.heading}
+                        </span>{" "}
+                        {benefit.description}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
+            ))}
+          />
+        </div>
 
-              {/* Description Section */}
-              {slide.description && (
-                <div className="w-full lg:w-1/2 text-gray-800 text-center lg:text-left text-sm sm:text-base px-4">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: slide.description.replace(/\n/g, "<br/>"),
-                    }}
-                  ></p>
-                  <div className="mt-6 flex justify-center lg:justify-start">
-                    <button className="bg-black text-white py-2 sm:py-3 px-6 sm:px-8 rounded-md transition-all duration-300 hover:bg-red-600">
-                      Discover
-                    </button>
-                  </div>
-                </div>
-              )}
-            </motion.div>
+        {/* Navigation Buttons */}
+        <button
+          onClick={handlePrev}
+          className="absolute left-2 sm:left-4  top-[120px] md:top-[200px] transform -translate-y-1/2 bg-[#2E4168] w-12 h-12 sm:w-14 sm:h-14 rounded-full text-white hover:bg-customDark shadow-lg flex items-center justify-center transition-all duration-300 z-50"
+        >
+          <FaChevronLeft size={24} />
+        </button>
 
-            {/* Image */}
-            <div
-              className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[800px] bg-cover bg-center lg:mx-2"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            ></div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <button
+          onClick={handleNext}
+          className="absolute right-2 sm:right-4 top-[120px] md:top-[200px] transform -translate-y-1/2 bg-[#2E4168] w-12 h-12 sm:w-14 sm:h-14 rounded-full text-white hover:bg-customDark shadow-lg flex items-center justify-center transition-all duration-300 z-50"
+        >
+          <FaChevronRight size={24} />
+        </button>
+      </div>
+
+      {/* Static Image Section */}
+      <div className="w-full flex justify-center mt-8 px-4">
+        <div
+          className="w-full h-48 sm:h-64 md:h-80 lg:h-[600px] bg-cover bg-center rounded-lg shadow-md"
+          style={{ backgroundImage: `url(${FramerMotion2})` }}
+        ></div>
+      </div>
     </div>
   );
 };

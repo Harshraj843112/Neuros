@@ -24,7 +24,7 @@ const ContactForm = () => {
 
     return (
         <div className="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-white p-8 rounded-lg shadow-lg mt-8">
-            <h2 className="text-3xl font-bold text-center text-blue-800 mb-6">Get in Touch</h2>
+            <h2 className="text-3xl font-bold text-center text-[#2E4168] mb-6">Get in Touch</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -34,7 +34,7 @@ const ContactForm = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300 outline-none"
+                            className="w-full p-3 border rounded-lg focus:ring focus:ring-[#2E4168] outline-none"
                             required
                         />
                     </div>
@@ -45,7 +45,7 @@ const ContactForm = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300 outline-none"
+                            className="w-full p-3 border rounded-lg focus:ring focus:ring-[#2E4168] outline-none"
                             required
                         />
                     </div>
@@ -59,7 +59,7 @@ const ContactForm = () => {
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300 outline-none"
+                            className="w-full p-3 border rounded-lg focus:ring focus:ring-[#2E4168] outline-none"
                         />
                     </div>
                     <div>
@@ -69,7 +69,7 @@ const ContactForm = () => {
                             name="address"
                             value={formData.address}
                             onChange={handleChange}
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300 outline-none"
+                            className="w-full p-3 border rounded-lg focus:ring focus:ring-[#2E4168] outline-none"
                         />
                     </div>
                 </div>
@@ -80,7 +80,7 @@ const ContactForm = () => {
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300 outline-none"
+                        className="w-full p-3 border rounded-lg focus:ring focus:ring-[#2E4168] outline-none"
                         rows="5"
                         required
                     ></textarea>
@@ -89,7 +89,7 @@ const ContactForm = () => {
                 <div className="text-center">
                     <button
                         type="submit"
-                        className="px-10 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition duration-300"
+                        className="px-10 py-3 bg-[#2E4168] text-white rounded-full font-bold hover:bg-[#243c6c] transition duration-300"
                     >
                         Send Message
                     </button>
