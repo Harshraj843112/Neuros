@@ -24,6 +24,94 @@ const ComparisonSection = () => {
         icon: <DocumentTextIcon className="h-6 w-6 text-green-500 inline-block mr-2" />,
       },
     },
+    {
+      aspect: "Data Accessibility",
+      other: {
+        text: "Limited to viewing scanned or xeroxed copies",
+        icon: <MagnifyingGlassCircleIcon className="h-6 w-6 text-red-500 inline-block mr-2" />,
+      },
+      gudmed: {
+        text: "Provides structured, searchable data, allowing easy access to individual prescription details",
+        icon: <ChartBarIcon className="h-6 w-6 text-green-500 inline-block mr-2" />,
+      },
+    },
+    {
+      aspect: "Data Usability",
+      other: {
+        text: "Minimal usability for analytics or processing",
+        icon: <ChartBarIcon className="h-6 w-6 text-red-500 inline-block mr-2" />,
+      },
+      gudmed: {
+        text: "Enables analytics, easy access, and integration for various use cases, such as patient engagement and follow-ups",
+        icon: <LinkIcon className="h-6 w-6 text-green-500 inline-block mr-2" />,
+      },
+    },
+    {
+      aspect: "Integration Capability",
+      other: {
+        text: "Limited due to storage of image files rather than structured data",
+        icon: <LinkIcon className="h-6 w-6 text-red-500 inline-block mr-2" />,
+      },
+      gudmed: {
+        text: "High integration capability with other hospital systems, pharmacies, and labs",
+        icon: <ClipboardDocumentCheckIcon className="h-6 w-6 text-green-500 inline-block mr-2" />, // Corrected this
+      },
+    },
+    {
+      aspect: "Operational Efficiency",
+      other: {
+        text: "Provides a basic digital record but does not improve workflow significantly",
+        icon: <BellAlertIcon className="h-6 w-6 text-red-500 inline-block mr-2" />,
+      },
+      gudmed: {
+        text: "Improves operational efficiency through automated reminders, real-time pharmacy updates, and lab test offerings",
+        icon: <ClipboardDocumentCheckIcon className="h-6 w-6 text-green-500 inline-block mr-2" />, // Corrected this
+      },
+    },
+    {
+      aspect: "Patient Engagement",
+      other: {
+        text: "Limited engagement; does not facilitate reminders or follow-up actions",
+        icon: <BellAlertIcon className="h-6 w-6 text-red-500 inline-block mr-2" />,
+      },
+      gudmed: {
+        text: "Engages patients with reminders for medication, follow-up appointments, and lab test notifications",
+        icon: <ClipboardDocumentCheckIcon className="h-6 w-6 text-green-500 inline-block mr-2" />, // Corrected this
+      },
+    },
+    {
+      aspect: "Document Format",
+      other: {
+        text: "Retains original handwriting in an image format",
+        icon: <DocumentDuplicateIcon className="h-6 w-6 text-red-500 inline-block mr-2" />,
+      },
+      gudmed: {
+        text: "Converts prescription to a digital text format, making it easier to use and share electronically",
+        icon: <DocumentTextIcon className="h-6 w-6 text-green-500 inline-block mr-2" />,
+      },
+    },
+    {
+      aspect: "Technology Benefits",
+      other: {
+        text: "Provides a basic digitization solution, often for record-keeping",
+        icon: <ShieldCheckIcon className="h-6 w-6 text-red-500 inline-block mr-2" />,
+      },
+      gudmed: {
+        text: "Offers real-time benefits, reducing discharge times and enhancing patient care post-treatment",
+        icon: <LockClosedIcon className="h-6 w-6 text-green-500 inline-block mr-2" />,
+      },
+    },
+    {
+      aspect: "Data Security",
+      other: {
+        text: "Stores data as images, often without structured data safeguards",
+        icon: <ShieldCheckIcon className="h-6 w-6 text-red-500 inline-block mr-2" />,
+      },
+      gudmed: {
+        text: "Offers structured, securely managed data without third-party sharing",
+        icon: <LockClosedIcon className="h-6 w-6 text-green-500 inline-block mr-2" />,
+      },
+    },
     // ... Other rows here (unchanged) ...
   ];
 
