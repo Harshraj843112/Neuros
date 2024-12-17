@@ -16,8 +16,8 @@ const slides = [
   },
   {
     title:
-      "Revolutionize your business <br> with cutting-edge Neural <br> Network solutions",
-    gradientWords: ["Neural", "Network"],
+      "Revolutionize patient care with <br> cutting-edge Artificial Intelligence <br> tailored for hospitals and<br>  healthcare providers .",
+    gradientWords: ["Artificial", "Intelligence","providers"],
     gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
   },
   {
@@ -45,7 +45,7 @@ const slides = [
   {
     title:
       "Explore how GudMed is <br> transforming healthcare  <br>one innovation at a time.",
-    gradientWords: ["GudMed", "transforming", "innovation"],
+    gradientWords: ["GudMed", "transforming", "innovation","healthcare" ],
   },
 ];
 
@@ -90,7 +90,7 @@ const Slider = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white">
       {/* Text Carousel Section */}
-      <div className="relative w-full px-4 py-0 sm:py-16 -mt-40 md:mt-8 flex flex-col items-center">
+      <div className="relative w-full px-4 py-0 sm:py-24 -mt-40 md:mt-8 flex flex-col items-center">
         <div className="relative w-full">
           {/* AliceCarousel for Text Transition */}
           <AliceCarousel

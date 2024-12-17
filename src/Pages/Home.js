@@ -14,7 +14,7 @@ import Footer from '../components/Footer';
 import ImageComparison from '../components/ImageCompare';
 import OurClient from '../components/OurClient';
 import KnowledgePartnerCardSection from '../components/KnowledgePartner/KnowldgePartnerCardSection';
-import DoctorsCarousel from '../components/CaroselSmall';
+import DoctorsCarousel from '../components/Team/CaroselSmall';
 import ComparisonSection from '../components/ComparisonSection';
 import WhyGudmedUnique from '../components/WhyGudmedUnique';
 import TechnologyPage from '../components/TechnologyPage';

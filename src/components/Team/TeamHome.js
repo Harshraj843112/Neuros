@@ -4,6 +4,7 @@ import TeamMemberCard from './TeamMemberCard'; // Corrected path
 import TeamHighlights from './TeamHighlights'; // Corrected path
 import TeamAdvisors from './TeamAdvisors'; // Corrected path
 import TeamStats from './TeamStats'; // Corrected path
+import DoctorsCarousel from './CaroselSmall';
 // import FounderImage from '../img/Atul_tiwari.jpg'; // Ensure img is inside src
 // import COOImage from '../img/Dhruv_sharma.jpg'; // Ensure img is inside src
 // import CTOImage from '../img/Ashish_cto.jpg'; // Ensure img is inside src
@@ -53,7 +54,8 @@ const TeamHome = () => {
             </div>
 
             {/* Advisors */}
-            <TeamAdvisors />
+            {/* <TeamAdvisors /> */}
+           <DoctorsCarousel></DoctorsCarousel>
 
             {/* Team Stats */}
             <TeamStats />

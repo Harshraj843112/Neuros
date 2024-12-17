@@ -5,31 +5,31 @@ import 'react-multi-carousel/lib/styles.css';
 
 const doctors = [
     {
-        image: require('../img/Dr-Anurag-Agarwal_edited_edited.png'),
+        image: require('../../img/Dr-Anurag-Agarwal_edited_edited (1).png'),
         name: "Dr. Anurag Agarwal",
         title: "Senior Consultant, NHS, UK",
         description: "Dr. Agarwal has been involved in the evolution of primary health services in the UK with extensive knowledge of healthcare delivery challenges."
     },
     {
-        image: require('../img/Dr-Ved-Prakash.png'),
+        image: require('../../img/Dr-Ved-Prakash.png'),
         name: "Dr. Ved Prakash",
         title: "Ex-Director, AIIMS, New Delhi",
         description: "Neurosurgeon with over 40 years in healthcare. Ex-Deputy Director of Medical Services, Indian Army."
     },
     {
-        image: require('../img/Dr-Swati-Singh.png'),
+        image: require('../../img/Dr-Swati-Singh.png'),
         name: "Dr. Swati Singh",
         title: "Consultant Onco-Surgeon",
         description: "Multi-Gold Medalist from LHMC, Delhi, with specialization in Onco-surgery and healthcare process improvement."
     },
     {
-        image: require('../img/MC-Misra.png'),
+        image: require('../../img/MC-Misra.png'),
         name: "Prof. MC Misra",
         title: "Ex-Director, AIIMS, New Delhi",
         description: "With over 40 years at AIIMS, he led the transformation and digitization efforts at AIIMS, Delhi."
     },
     {
-        image: require('../img/Dr manish pant.jpg'),
+        image: require('../../img/Dr manish pant.jpg'),
         name: "Dr. Manish Pant",
         title: "Chief, Health and Governance, UNDP, India",
         description: "Preventive & Social Medicine specialist, ex-WHO advisor, and creator of the COWIN platform for immunization and COVID vaccination."
@@ -59,8 +59,8 @@ const DoctorsCarousel = () => {
                 transitionDuration={1000} // Smooth transition duration
             >
                 {doctors.map((doctor, index) => (
-                    <div key={index} className="w-10/12 mx-auto bg-white p-6 rounded-lg shadow-lg group hover:shadow-xl transition duration-300 ease-in-out">
-                        <div className="w-full h-40 flex justify-center items-center mb-4"> {/* Adjusted container height */}
+                    <div key={index} className="w-10/12 mx-auto bg-white p-4 rounded-lg shadow-lg group hover:shadow-xl transition duration-300 ease-in-out">
+                        <div className="w-full h-28 flex justify-center items-center mb-4"> {/* Adjusted container height */}
                             <img
                                 src={doctor.image}
                                 alt={doctor.name}

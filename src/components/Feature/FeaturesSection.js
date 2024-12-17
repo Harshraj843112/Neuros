@@ -12,7 +12,7 @@ const FeaturesSection = () => {
             🔧 HOW WE WORK  ?
           </h2>
           <h3 className="text-2xl lg:text-3xl text-[#2E4168] font-medium max-w-3xl mx-auto">
-            Simplifying Healthcare with GudMed
+            Simplifying Healthcare with GudMed : 🔧
           </h3>
           <p className="text-lg text-[#2E4168] mt-4 max-w-3xl mx-auto">
             At GudMed, we believe that technology should enhance the work you already do, not complicate it. Our solution is designed to keep the process familiar and straightforward while bringing the benefits of digitalization right to your fingertips. 
@@ -97,7 +97,7 @@ const FeaturesSection = () => {
         {/* Process Steps Section */}
         <div className="mt-16 text-center">
           <h3 className="text-3xl font-semibold text-[#2E4168] mb-6">
-            How GudMed Makes It Easy
+            How GudMed Makes It Easy :
           </h3>
           
           <div className="space-y-6 max-w-1xl mx-auto">
