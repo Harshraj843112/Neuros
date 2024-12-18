@@ -34,7 +34,7 @@ const AboutSection = ({ title, text, image }) => (
 
 // Reusable Component for Mission Section
 const MissionSection = ({ mission }) => (
-  <div className="bg-blue-50 py-10 px-6 md:px-12 rounded-lg shadow-md text-center">
+  <div className="bg-white py-10 px-6 md:px-12 rounded-lg shadow-md text-center">
     <div className="flex items-center justify-center space-x-3 mb-4">
       <FaHeartbeat className="text-red-500 text-3xl" />
       <h3 className="text-xl md:text-2xl font-bold text-[#2E4168]">Our Mission</h3>

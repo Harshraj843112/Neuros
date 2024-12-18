@@ -6,47 +6,48 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 // Your Image Import
 import FramerMotion2 from "../img/Presentation1_page-0001.jpg";
+import NewVideo from "../img/rome.mp4"
 
 // Slide Data
 const slides = [
   {
-    title: "Harness the Power <br> of GudMed AI",
-    gradientWords: ["GudMed", "AI"],
+    title: "Harness the <br> Power  of <br> GudMed AI",
+    gradientWords: ["GudMed", "AI","Power"],
     gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
   },
-  {
-    title:
-      "Revolutionize patient care with <br> cutting-edge Artificial Intelligence <br> tailored for hospitals and<br>  healthcare providers .",
-    gradientWords: ["Artificial", "Intelligence","providers"],
-    gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
-  },
-  {
-    title: "Unlock these Benefits",
-    gradientWords: ["Benefits"],
-    gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
-    benefits: [
-      {
-        heading: "Improved Decision-Making:",
-        description: "Make real-time, data-driven decisions for better patient outcomes.",
-        gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
-      },
-      {
-        heading: "Predictive Analytics:",
-        description: "Anticipate patient needs with precision for proactive care.",
-        gradient: "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500",
-      },
-      {
-        heading: "Automation:",
-        description: "Streamline processes from discharge summaries to prescription digitization.",
-        gradient: "bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500",
-      },
-    ],
-  },
-  {
-    title:
-      "Explore how GudMed is <br> transforming healthcare  <br>one innovation at a time.",
-    gradientWords: ["GudMed", "transforming", "innovation","healthcare" ],
-  },
+  // {
+  //   title:
+  //     "Revolutionize patient care with <br> cutting-edge Artificial Intelligence <br> tailored for hospitals and<br>  healthcare providers .",
+  //   gradientWords: ["Artificial", "Intelligence","providers"],
+  //   gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
+  // },
+  // {
+  //   title: "Unlock these Benefits",
+  //   gradientWords: ["Benefits"],
+  //   gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
+  //   benefits: [
+  //     {
+  //       heading: "Improved Decision-Making:",
+  //       description: "Make real-time, data-driven decisions for better patient outcomes.",
+  //       gradient: "bg-gradient-to-r from-blue-400 via-green-500 to-teal-500",
+  //     },
+  //     {
+  //       heading: "Predictive Analytics:",
+  //       description: "Anticipate patient needs with precision for proactive care.",
+  //       gradient: "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500",
+  //     },
+  //     {
+  //       heading: "Automation:",
+  //       description: "Streamline processes from discharge summaries to prescription digitization.",
+  //       gradient: "bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title:
+  //     "Explore how GudMed is <br> transforming healthcare  <br>one innovation at a time.",
+  //   gradientWords: ["GudMed", "transforming", "innovation","healthcare" ],
+  // },
 ];
 
 const Slider = () => {
@@ -54,7 +55,7 @@ const Slider = () => {
   const carouselRef = useRef();
 
   const carouselSettings = {
-    autoPlay: true,
+    autoPlay: false,
     autoPlayInterval: 3000, // Text changes every 3 seconds
     infinite: true,
     disableButtonsControls: true, // Hide default controls
@@ -90,7 +91,7 @@ const Slider = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white">
       {/* Text Carousel Section */}
-      <div className="relative w-full px-4 py-0 sm:py-24 -mt-40 md:mt-8 flex flex-col items-center">
+      <div className="relative w-full px-4 py-0 sm:py-24 -mt-40 md:mt-0 flex flex-col items-center">
         <div className="relative w-full">
           {/* AliceCarousel for Text Transition */}
           <AliceCarousel
@@ -102,7 +103,7 @@ const Slider = () => {
                 className="text-container animate__animated animate__slideInRight animate__faster"
                 key={index}
               >
-                <h1 className="text-gray-800 text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold leading-tight">
+                <h1 className="text-gray-800 text-center text-3xl sm:text-4xl md:text-5xl lg:text-9xl font-semibold leading-tight">
                   {/* Title with animation */}
                   {slide.title.split(/<br\s*\/?>/).map((chunk, i) => (
                     <React.Fragment key={i}>
@@ -169,11 +170,20 @@ const Slider = () => {
 
       {/* Static Image Section */}
       <div className="w-full flex justify-center mt-8 px-4">
-        <div
-          className="w-full h-48 sm:h-64 md:h-80 lg:h-[600px] bg-cover bg-center rounded-lg shadow-md"
-          style={{ backgroundImage: `url(${FramerMotion2})` }}
-        ></div>
-      </div>
+  <div className="w-full h-48 sm:h-64 md:h-80 lg:h-[600px] rounded-lg shadow-md overflow-hidden">
+    <video
+      className="w-full h-full object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src={NewVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
     </div>
   );
 };

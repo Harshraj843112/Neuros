@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}

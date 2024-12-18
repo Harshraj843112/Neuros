@@ -116,7 +116,7 @@ const ComparisonSection = () => {
   ];
 
   return (
-    <section className="bg-white py-12 px-4 sm:px-8 lg:px-16">
+    <section className="bg-white py-12 px-1 sm:px-8 lg:px-16">
       <div className="overflow-hidden shadow-xl rounded-lg">
         <div className="overflow-x-auto w-full">
           <table className="table-auto min-w-full bg-white rounded-lg">
@@ -128,7 +128,7 @@ const ComparisonSection = () => {
                 <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold">
                   Other Technology
                 </th>
-                <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold text-[#2E4168]">
+                <th className="border border-blue-300 px-4 sm:px-6 py-3 text-left font-bold text-white">
                   GudMed Technology
                 </th>
               </tr>

@@ -1,6 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { FaHospitalAlt, FaPrescription, FaVials, FaCapsules, FaUserMd, FaRobot } from "react-icons/fa"; // Example icons
+import { FaHospitalAlt, FaPrescription, FaVials, FaCapsules, FaUserMd, FaRobot } from "react-icons/fa";
 
 const AnimatedText = () => {
   return (
@@ -13,7 +13,7 @@ const AnimatedText = () => {
           zIndex: 1, // Behind the red container
         }}
       >
-        <Marquee speed={60} gradient={false} direction="left">
+        <Marquee speed={60} gradient={false} direction="left" className="hide-scrollbar">
           <span className="text-4xl font-bold text-white px-8 flex items-center gap-2">
             <FaCapsules className="text-purple-500" /> Direct Pharmacy Integration for more revenues 💰
           </span>
@@ -31,10 +31,10 @@ const AnimatedText = () => {
         className="bg-[#FF4C4C] h-20 flex items-center absolute top-[-250px] sm:top-[-200px] md:top-[-100px] lg:top-[-70px] xl:top-[-50px] left-0 w-full p-4"
         style={{
           transform: "rotate(2deg)", // Red rotated and shifted
-          zIndex: 2, // Above the black container
+          zIndex: 1, // Above the black container
         }}
       >
-        <Marquee speed={60} gradient={false} direction="right">
+        <Marquee speed={60} gradient={false} direction="right" className="hide-scrollbar">
           <span className="text-4xl font-bold text-black px-8 flex items-center gap-2">
             <FaRobot className="text-yellow-500" /> Faster Discharges = Higher Bed Turnover ⏩
           </span>
@@ -51,3 +51,18 @@ const AnimatedText = () => {
 };
 
 export default AnimatedText;
+
+// Tailwind CSS styles to hide the scrollbar
+const style = document.createElement("style");
+style.textContent = `
+  /* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Firefox */
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+`;
+document.head.appendChild(style);
